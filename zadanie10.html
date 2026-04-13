@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zadanie 1</title>
+  <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+
+  <div class="container">
+    
+    <h1>Zadanie 1</h1>
+    <p class="subtitle">Tutaj wpiszesz treść zadania numer 1.</p>
+    <button id="playSoundBtn">🔊 Odtwórz nagranie</button>
+<audio id="audio1" src="rura.mp4.mp4"></audio>
+
+<script>
+  document.getElementById("playSoundBtn").addEventListener("click", () => {
+    document.getElementById("audio1").play();
+  });
+</script>
+
+    <a href="index.html" class="back-btn">WRÓĆ</a>
+  </div>
+
+</body>
+</html>
