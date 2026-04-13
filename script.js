@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     taskDiv.innerHTML = `
       <div class="task-header">
         <div class="task-icon">
-          <img src="icons/${task.id}.png" alt="Ikona zadania ${task.id}">
+          <img src="${task.id}.png" alt="Ikona zadania ${task.id}">
         </div>
         <div class="task-title-wrap">
           <div class="task-title">${task.title}</div>
