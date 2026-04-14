@@ -4,24 +4,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zadanie 1</title>
-  <link rel="stylesheet" href="style.css?v=3">
+
+  <link rel="stylesheet" href="style.css?v=4">
+
+  <style>
+    /* pełnoekranowy układ */
+    .task-fullscreen {
+      position: fixed;
+      inset: 0;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* grafika */
+    .task-fullscreen img {
+      width: 100%;
+      height: calc(100dvh - 80px);
+      object-fit: contain;
+      display: block;
+    }
+
+    /* dolny pasek */
+    .bottom-bar {
+      height: 80px;
+      padding: 12px;
+      background: rgba(0,0,0,0.9);
+      display: flex;
+      align-items: center;
+    }
+
+    /* przycisk wróć */
+    .bottom-bar a {
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      padding: 14px;
+      border-radius: 10px;
+
+      background: linear-gradient(#ffd54f, #ffb300);
+      color: #111;
+      font-weight: bold;
+    }
+  </style>
 </head>
+
 <body>
 
-  <div class="container">
+  <div class="task-fullscreen">
     
-    <h1>Zadanie 1</h1>
-    <p class="subtitle">Tutaj wpiszesz treść zadania numer 1.</p>
-    <button id="playSoundBtn">🔊 Odtwórz nagranie</button>
-<audio id="audio1" src="rura.mp4.mp4"></audio>
+    <!-- TU WRZUCASZ SWOJĄ GRAFIKĘ -->
+    <img src="strona10.jpg" alt="Zadanie 1">
 
-<script>
-  document.getElementById("playSoundBtn").addEventListener("click", () => {
-    document.getElementById("audio1").play();
-  });
-</script>
+    <div class="bottom-bar">
+      <a href="index.html">WRÓĆ</a>
+    </div>
 
-    <a href="index.html" class="back-btn">WRÓĆ</a>
   </div>
 
 </body>
