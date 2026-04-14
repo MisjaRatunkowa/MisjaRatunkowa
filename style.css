@@ -31,9 +31,46 @@ h1 {
 
 .subtitle {
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
   color: #d6d6d6;
   font-size: 1rem;
+}
+
+/* pasek postępu */
+.progress-wrapper {
+  background: rgba(28, 28, 36, 0.92);
+  border: 1px solid rgba(255, 213, 79, 0.25);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.progress-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 14px;
+  background: #11141a;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #444;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ffd54f, #ffb300);
+  transition: width 0.3s ease;
 }
 
 .task {
@@ -52,17 +89,21 @@ h1 {
   margin-bottom: 14px;
 }
 
-.task-number {
-  min-width: 44px;
-  height: 44px;
+.task-icon {
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #ffd54f, #ffb300);
-  color: #111;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1rem;
+  overflow: hidden;
+  background: #222;
+  border: 2px solid rgba(255, 213, 79, 0.35);
+}
+
+.task-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .task-title-wrap {
@@ -80,6 +121,23 @@ h1 {
 .task-label {
   font-size: 0.9rem;
   color: #b9b9b9;
+}
+
+.task-link-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background: #3a3a3a;
+  color: white;
+  font-weight: bold;
+}
+
+.task-link-btn:hover {
+  background: #505050;
 }
 
 input {
@@ -107,10 +165,16 @@ button {
   color: #111;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.2s ease;
 }
 
 button:hover {
   filter: brightness(1.05);
+}
+
+button.done-btn {
+  background: linear-gradient(135deg, #39c96b, #1f9e4b);
+  color: white;
 }
 
 .answer {
@@ -118,6 +182,23 @@ button:hover {
   font-weight: bold;
   min-height: 20px;
   color: #ffd54f;
+}
+
+.back-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 14px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background: #222;
+  color: white;
+  font-weight: bold;
+}
+
+.back-btn:hover {
+  background: #444;
 }
 
 @media (max-width: 600px) {
@@ -140,59 +221,8 @@ button:hover {
   .task-label {
     font-size: 0.82rem;
   }
-}
-.task-header {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 14px;
-}
 
-.task-icon {
-  width: 64px;
-  height: 64px;
-  min-width: 64px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: #222;
-  border: 2px solid rgba(255, 213, 79, 0.35);
-}
-
-.task-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.task-link-btn {
-  display: block;
-  width: 100%;
-  text-align: center;
-  text-decoration: none;
-  padding: 12px 14px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  background: #3a3a3a;
-  color: white;
-  font-weight: bold;
-}
-
-.task-link-btn:hover {
-  background: #505050;
-}
-.back-btn {
-  display: block;
-  width: 100%;
-  text-align: center;
-  text-decoration: none;
-  padding: 12px 14px;
-  margin-top: 20px;
-  border-radius: 10px;
-  background: #222;
-  color: white;
-  font-weight: bold;
-}
-
-.back-btn:hover {
-  background: #444;
+  .progress-wrapper {
+    top: 0;
+  }
 }
