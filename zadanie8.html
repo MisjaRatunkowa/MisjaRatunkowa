@@ -3,27 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zadanie 8</title>
-  <link rel="stylesheet" href="style.css?v=2">
+  <title>Zadanie 1</title>
+
+  <link rel="stylesheet" href="style.css?v=4">
+
+  <style>
+    /* pełnoekranowy układ */
+    .task-fullscreen {
+      position: fixed;
+      inset: 0;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* grafika */
+    .task-fullscreen img {
+      width: 100%;
+      height: calc(100dvh - 80px);
+      object-fit: contain;
+      display: block;
+    }
+
+    /* dolny pasek */
+    .bottom-bar {
+      height: 80px;
+      padding: 12px;
+      background: rgba(0,0,0,0.9);
+      display: flex;
+      align-items: center;
+    }
+
+    /* przycisk wróć */
+    .bottom-bar a {
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      padding: 14px;
+      border-radius: 10px;
+
+      background: linear-gradient(#ffd54f, #ffb300);
+      color: #111;
+      font-weight: bold;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="container">
-  <h1 class="title">Zadanie nr 8</h1>
-  <p class="subtitle">Losowa godzina:</p>
+  <div class="task-fullscreen">
+    
+    <!-- TU WRZUCASZ SWOJĄ GRAFIKĘ -->
+    <img src="strona8.jpg" alt="Zadanie 1">
 
-  <p id="time" style="text-align:center; font-size:2rem; font-weight:bold;"></p>
+    <div class="bottom-bar">
+      <a href="index.html">WRÓĆ</a>
+    </div>
 
-  <a href="index.html" class="back-btn" style="margin-top:25px;">
-    ⬅️ WRÓĆ do strony głównej
-  </a>
-</div>
-
-<script>
-  const h = String(Math.floor(Math.random() * 24)).padStart(2, '0');
-  const m = String(Math.floor(Math.random() * 60)).padStart(2, '0');
-  document.getElementById("time").textContent = `${h}:${m}`;
-</script>
+  </div>
 
 </body>
 </html>
