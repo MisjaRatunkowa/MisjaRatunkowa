@@ -3,19 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Misja Ratunkowa: Ogród Doświadczeń</title>
-  <link rel="stylesheet" href="style.css?v=2">
+  <title>Misja Ratunkowa</title>
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
   <div class="container">
-    
-    <h1>Misja Ratunkowa:</h1>
-    <p class="subtitle">Ogród Doświadczeń</p>
+    <h1>Misja Ratunkowa</h1>
+    <p class="subtitle">Rozwiąż wszystkie zadania i wpisz poprawne kody</p>
+
+    <div class="progress-wrapper">
+      <div class="progress-top">
+        <span>Postęp</span>
+        <span><span id="progressText">0</span>/10</span>
+      </div>
+      <div class="progress-bar">
+        <div id="progressFill" class="progress-fill"></div>
+      </div>
+    </div>
 
     <div id="tasks"></div>
   </div>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>
