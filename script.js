@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   const tasksData = [
-    { id: 1, title: "Rozgrzewka Pana Młodego", code: "1234" },
-    { id: 2, title: "Test Lojalności Ekipy", code: "2345" },
-    { id: 3, title: "Misja: Pierwszy Toast", code: "3456" },
-    { id: 4, title: "Sekretna Wiedza o Adamie", code: "4567" },
-    { id: 5, title: "Próba Charakterna", code: "5678" },
-    { id: 6, title: "Operacja Kawalerski", code: "6789" },
-    { id: 7, title: "Wyzwanie Ostatniej Wolności", code: "7890" },
-    { id: 8, title: "Męska Narada Kryzysowa", code: "8901" },
-    { id: 9, title: "Instrukcja Obsługi Pana Młodego", code: "9012" },
-    { id: 10, title: "Finał Wieczoru", code: "0123" }
+  { id: 1, title: "Główna rozdzielnia", code: "1234" },
+    { id: 2, title: "Centrum informatyczne", code: "2345" },
+    { id: 3, title: "Szafa elektryczna", code: "3456" },
+    { id: 4, title: "Wyspa zasilająca", code: "4567" },
+    { id: 5, title: "Centrum obserwacyjne", code: "5678" },
+    { id: 6, title: "Podziemia", code: "6789" },
+    { id: 7, title: "Archiwa", code: "7890" },
+    { id: 8, title: "Centrum radiowe", code: "8901" },
+    { id: 9, title: "Ruiny starego laboratorium", code: "9012" },
+    { id: 10, title: "Reaktor", code: "0123" }
   ];
 
   const tasksContainer = document.getElementById("tasks");
