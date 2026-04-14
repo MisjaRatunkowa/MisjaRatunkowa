@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const tasksData = [
-  { id: 1, title: "Główna rozdzielnia", code: "1234" },
+    { id: 1, title: "Główna rozdzielnia", code: "1234" },
     { id: 2, title: "Centrum informatyczne", code: "2345" },
     { id: 3, title: "Szafa elektryczna", code: "3456" },
     { id: 4, title: "Wyspa zasilająca", code: "4567" },
@@ -13,8 +13,25 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const tasksContainer = document.getElementById("tasks");
+  const progressText = document.getElementById("progressText");
+  const progressFill = document.getElementById("progressFill");
+
+  function updateProgress() {
+    let doneCount = 0;
+
+    tasksData.forEach(task => {
+      if (localStorage.getItem(`task_${task.id}`) === "done") {
+        doneCount++;
+      }
+    });
+
+    progressText.textContent = doneCount;
+    progressFill.style.width = `${(doneCount / tasksData.length) * 100}%`;
+  }
 
   tasksData.forEach(task => {
+    const isDone = localStorage.getItem(`task_${task.id}`) === "done";
+
     const taskDiv = document.createElement("div");
     taskDiv.className = "task";
 
@@ -31,9 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <a href="zadanie${task.id}.html" class="task-link-btn">Otwórz zadanie</a>
 
-      <input type="text" placeholder="Wpisz kod">
-      <button>Sprawdź</button>
-      <div class="answer"></div>
+      <input type="text" placeholder="Wpisz kod" ${isDone ? "disabled" : ""}>
+      <button class="${isDone ? 'done-btn' : ''}">${isDone ? 'Zaliczone' : 'Sprawdź'}</button>
+      <div class="answer">${isDone ? 'Poprawny kod' : ''}</div>
     `;
 
     const input = taskDiv.querySelector("input");
@@ -42,7 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     button.addEventListener("click", () => {
       if (input.value === task.code) {
+        localStorage.setItem(`task_${task.id}`, "done");
         answerDiv.textContent = "Poprawny kod";
+        button.textContent = "Zaliczone";
+        button.classList.add("done-btn");
+        input.disabled = true;
+        updateProgress();
       } else {
         answerDiv.textContent = "Błędny kod";
       }
@@ -50,4 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tasksContainer.appendChild(taskDiv);
   });
+
+  updateProgress();
 });
