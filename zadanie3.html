@@ -1,152 +1,66 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zadanie 1</title>
-  <link rel="stylesheet" href="style.css?v=2">
+
+  <link rel="stylesheet" href="style.css?v=4">
+
   <style>
-    /* Drobne style tylko dla tej podstrony */
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: #000;
-  display: none;
-  z-index: 9999;
-}
-
-.overlay.active {
-  display: block;
-}
-
-/* obraz zostawia miejsce na przycisk */
-.overlay img {
-  width: 100%;
-  height: calc(100vh - 80px);
-  object-fit: contain;
-  display: block;
-}
-
-/* pasek na dole z przyciskiem */
-.overlay-footer {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 12px;
-  background: rgba(0,0,0,0.85);
-}
-
-/* przycisk */
-.overlay-footer .back-btn {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-
-  padding: 12px;
-  border-radius: 10px;
-
-  font-weight: 900;
-  letter-spacing: 0.3px;
-
-  background: linear-gradient(#ffcc33, #c59d00);
-  color: #111;
-}
-
-    .center {
-      text-align: center;
-    }
-
-    .page-btn {
-      width: 100%;
-      margin-top: 12px;
-      padding: 12px;
-      font-family: 'Cinzel', serif;
-      font-weight: bold;
-      font-size: 1rem;
-      background: linear-gradient(#8b5a2b, #5a3a1b);
-      color: #fff2cc;
-      border: 2px solid #3a2412;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    .page-btn:hover {
-      background: linear-gradient(#a66a34, #6b4320);
-    }
-
-    /* Ekran z kotkiem */
-    .overlay {
+    /* pełnoekranowy układ */
+    .task-fullscreen {
       position: fixed;
       inset: 0;
-      display: none;
       background: #000;
-      z-index: 9999;
-    }
-
-    .overlay.active {
       display: flex;
       flex-direction: column;
     }
 
-    .overlay img {
-      flex: 1;
+    /* grafika */
+    .task-fullscreen img {
       width: 100%;
-      height: 100%;
+      height: calc(100dvh - 80px);
       object-fit: contain;
-      background: #000;
-    }
-
-    .overlay .bottom {
-      padding: 12px;
-      background: rgba(0,0,0,0.85);
-    }
-
-    .overlay .bottom a {
       display: block;
+    }
+
+    /* dolny pasek */
+    .bottom-bar {
+      height: 80px;
+      padding: 12px;
+      background: rgba(0,0,0,0.9);
+      display: flex;
+      align-items: center;
+    }
+
+    /* przycisk wróć */
+    .bottom-bar a {
+      width: 100%;
       text-align: center;
       text-decoration: none;
-      padding: 12px;
-      border-radius: 8px;
-      font-family: 'Cinzel', serif;
-      font-weight: bold;
-      color: #ffe6c7;
-      background: linear-gradient(#7a2e2e, #4a1515);
-      border: 2px solid #2a0d0d;
-    }
+      padding: 14px;
+      border-radius: 10px;
 
-    .overlay .bottom a:hover {
-      background: linear-gradient(#9a3a3a, #5a1d1d);
+      background: linear-gradient(#ffd54f, #ffb300);
+      color: #111;
+      font-weight: bold;
     }
   </style>
 </head>
+
 <body>
 
-  <div class="container">
-    <h1 class="title">Zadanie nr 1</h1>
-    <p class="subtitle">TRESC ZADANIA NR 1</p>
+  <div class="task-fullscreen">
+    
+    <!-- TU WRZUCASZ SWOJĄ GRAFIKĘ -->
+    <img src="strona3.jpg" alt="Zadanie 1">
 
-    <button id="goNext" class="page-btn">PRZEJDŹ DALEJ</button>
+    <div class="bottom-bar">
+      <a href="index.html">WRÓĆ</a>
+    </div>
+
   </div>
 
-  <!-- Fullscreen kotek -->
-<div id="kotekOverlay" class="overlay" aria-hidden="true">
-  <img src="zadanie1.png.png" alt="Kotek">
-
-  <div class="overlay-footer">
-    <a href="index.html" class="back-btn">WRÓĆ</a>
-  </div>
-</div>  
-
-
-  <script>
-    const goNext = document.getElementById("goNext");
-    const overlay = document.getElementById("kotekOverlay");
-
-    goNext.addEventListener("click", () => {
-      overlay.classList.add("active");
-      overlay.setAttribute("aria-hidden", "false");
-    });
-  </script>
 </body>
 </html>
