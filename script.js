@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   const tasksData = [
-    { id: 1, title: "Główna rozdzielnia", code: "1234" },
-    { id: 2, title: "Centrum informatyczne", code: "2345" },
-    { id: 3, title: "Szafa elektryczna", code: "3456" },
-    { id: 4, title: "Wyspa zasilająca", code: "4567" },
-    { id: 5, title: "Centrum obserwacyjne", code: "5678" },
-    { id: 6, title: "Podziemia", code: "6789" },
-    { id: 7, title: "Archiwa", code: "7890" },
-    { id: 8, title: "Centrum radiowe", code: "8901" },
-    { id: 9, title: "Ruiny starego laboratorium", code: "9012" },
-    { id: 10, title: "Reaktor", code: "0123" }
+    { id: 1, title: "Główna rozdzielnia", code: "1143" },
+    { id: 2, title: "Centrum informatyczne", code: "74" },
+    { id: 3, title: "Szafa elektryczna", code: "15" },
+    { id: 4, title: "Wyspa zasilająca", code: "27" },
+    { id: 5, title: "Centrum obserwacyjne", code: "273" },
+    { id: 6, title: "Podziemia", code: "501" },
+    { id: 7, title: "Archiwa", code: "25" },
+    { id: 8, title: "Centrum radiowe", code: "145" },
+    { id: 9, title: "Ruiny starego laboratorium", code: "3786" },
+    { id: 10, title: "Turbina", code: "386" }
   ];
 
   const tasksContainer = document.getElementById("tasks");
