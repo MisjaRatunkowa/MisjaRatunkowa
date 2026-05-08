@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { id: 1, title: "Główna rozdzielnia", code: "1143" },
     { id: 2, title: "Centrum informatyczne", code: "74" },
     { id: 3, title: "Szafa elektryczna", code: "15" },
-    { id: 4, title: "Wyspa zasilająca", code: "27" },
+    { id: 4, title: "Wyspa zasilająca", code: "37" },
     { id: 5, title: "Centrum obserwacyjne", code: "273" },
     { id: 6, title: "Podziemia", code: "501" },
     { id: 7, title: "Archiwa", code: "25" },
