@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { id: 6, title: "Podziemia", code: "501" },
     { id: 7, title: "Archiwa", code: "25" },
     { id: 8, title: "Centrum radiowe", code: "145" },
-    { id: 9, title: "Ruiny starego laboratorium", code: "3786" },
+    { id: 9, title: "Ruiny starego laboratorium", code: "3678" },
     { id: 10, title: "Turbina", code: "386" }
   ];
 
